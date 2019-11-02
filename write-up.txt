@@ -1,0 +1,38 @@
+Back-end Task
+
+1. Understanding of the problem
+
+To create a API using which user can pass a csv file and 
+the data in that file is saved into PostgreSQL database.
+
+2. Implementation
+
+The API provides one function `send_data` which accepts 
+path to csv file as a argument and returns True if data was
+successfully entered into the database.
+
+Data is entered in database named `xride` and table named `xride_data`.
+I have assumed that table is already created and information schema of the
+table is:
+
+    column_name       | data_type 
+----------------------+-----------
+ id                   | integer
+ user_id              | integer
+ vehicle_model_id     | integer
+ package_id           | integer
+ travel_type_id       | integer
+ from_area_id         | integer
+ to_area_id           | integer
+ from_city_id         | integer
+ to_city_id           | integer
+ from_date            | date
+ to_date              | date
+ online_booking       | boolean
+ mobile_site_booking1 | boolean
+ booking_created      | date
+ from_lat             | numeric
+ from_long            | numeric
+ to_lat               | numeric
+ to_long              | numeric
+ car_cancellation     | boolean
